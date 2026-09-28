@@ -1,0 +1,4 @@
+/* Limpiamos los estilos por defecto de Vite para que Bootstrap trabaje bien */
+body {
+  margin: 0;
+}

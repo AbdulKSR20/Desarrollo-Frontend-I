@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "nombre": "Minecraft",
+        "precioNormal": 49990,
+        "precioOferta": 39990,
+        "descripcion": "Sobrevive, construye y explora en un mundo infinito de bloques.",
+        "imagen": "img/videoJuego_Minecraft.jpg",
+        "consola": "PS5"
+    },
+    {
+        "id": 2,
+        "nombre": "Mariokart World Tour",
+        "precioNormal": 59990,
+        "precioOferta": 49990,
+        "descripcion": "Compite en carreras locas con tus personajes favoritos de Nintendo.",
+        "imagen": "img/videoJuego_Mariokart.jpg",
+        "consola": "Nintendo Switch"
+    },
+    {
+        "id": 3,
+        "nombre": "Elden Ring",
+        "precioNormal": 64990,
+        "precioOferta": 54990,
+        "descripcion": "Un juego de rol de acción y fantasía oscura desafiante.",
+        "imagen": "img/videoJuego_Eldenring.jpg",
+        "consola": "Xbox"
+    },
+    {
+        "id": 4,
+        "nombre": "Consola PlayStation 5",
+        "precioNormal": 699990,
+        "precioOferta": 649990,
+        "descripcion": "Experimenta tiempos de carga súper rápidos y una inmersión más profunda con PS5.",
+        "imagen": "img/consola_Ps5.jfif",
+        "consola": "PS5"
+    },
+    {
+        "id": 5,
+        "nombre": "Consola Xbox Series X",
+        "precioNormal": 679990,
+        "precioOferta": 629990,
+        "descripcion": "La consola Xbox más rápida y potente de la historia.",
+        "imagen": "img/consola_Xbox.jfif",
+        "consola": "Xbox"
+    },
+    {
+        "id": 6,
+        "nombre": "Consola Nintendo Switch 2",
+        "precioNormal": 579990,
+        "precioOferta": 529990,
+        "descripcion": "La última innovación híbrida para jugar en casa o donde vayas.",
+        "imagen": "img/consola_NintendoSwitch2.png",
+        "consola": "Nintendo Switch"
+    }
+]
