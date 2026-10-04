@@ -8,6 +8,14 @@ function Carrito(props) {
         //Carrito
         <div className="bg-dark text-white p-4 rounded position-sticky" style={{ top: '20px' }}>
             <h3 className="mb-4">🛒 Tu Carrito</h3>
+            {/*Boton para vaciar el carrito si el carrito tiene productos*/}
+            <button
+                className={`btn mb-4 w-100 ${props.listaCarrito.length === 0 ? 'btn-secondary' : 'btn-danger'}`}
+                onClick={props.vaciarCarrito}
+                disabled={props.listaCarrito.length === 0}
+            >
+                {props.listaCarrito.length === 0 ? 'El carrito ya está vacío' : 'Vaciar todo el carrito 🗑️'}
+            </button>
             {/*Agregar texto si el carrito esta vacio*/}
             {props.listaCarrito.length === 0 ? (
                 <p align="center">El carrito está vacío. ¡Agrega algunos juegos!</p>
