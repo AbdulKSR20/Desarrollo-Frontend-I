@@ -1,51 +1,38 @@
-# Tienda de Videojuegos 🎮
+# Tienda de Videojuegos - eCommerce en React 🎮
 
-Esta es una tienda de videojuegos en línea desarrollada con **React (Vite)** y **Bootstrap**. El proyecto incluye un catálogo interactivo de productos y un carrito de compras funcional.
+Este proyecto es una simulación de una tienda de videojuegos (eCommerce) construida completamente en **React** y estilizada con **Bootstrap 5**.
 
-## Características principales ✨
+## 🚀 Tecnologías Utilizadas
+- **React (Vite):** Framework principal para la construcción de interfaces de usuario.
+- **JavaScript (ES6+):** Lógica funcional, manipulación de arreglos (`.map`, `.filter`, `.reduce`).
+- **Bootstrap 5:** Sistema de grillas (`row`, `col`) y componentes visuales responsivos (`cards`, `spinners`).
+- **Git y GitHub Pages:** Control de versiones y despliegue web.
 
-*   **Catálogo de Productos:** Muestra una lista de videojuegos con sus descripciones y precios.
-*   **Carrito de Compras:** Los usuarios pueden agregar juegos al carrito, ver la cantidad total, calcular el precio a pagar y eliminar artículos individualmente.
-*   **Diseño Responsivo:** Interfaz adaptada para visualizarse correctamente tanto en dispositivos móviles (celulares y tablets) como en computadoras de escritorio.
-*   **Despliegue Continuo:** Configurado con `gh-pages` para un despliegue rápido y sencillo en GitHub Pages.
+## 🛠️ Funcionalidades Clave (Semana 8)
+1. **Catálogo Dinámico:** Los productos no están fijos en el código. Se utiliza el Hook `useEffect` para simular el consumo de una API externa, descargando los datos desde un archivo local `productos.json` de manera asíncrona.
+2. **Estado de Carga (Loading Spinner):** Se implementó una latencia simulada con `setTimeout` dentro del `useEffect`, mostrando un _spinner_ de carga (Renderizado Condicional) antes de dibujar el catálogo.
+3. **Gestión de Carrito (`useState`):** 
+   - Agregar productos a la memoria del carrito sin mutar el arreglo original (usando _Spread Operator_).
+   - Eliminar productos específicos usando `filter` por su índice.
+   - Vaciar todo el carrito con un solo clic.
+   - Cálculos automáticos matemáticos en tiempo real para el **Total a Pagar** (`reduce`) y la **Cantidad de Productos** (`length`).
+4. **Interactividad Avanzada:** Los botones de compra en las tarjetas implementan un estado local (`useState`) que cambia su color a verde y muestra el mensaje "¡Agregado!" temporalmente antes de regresar a su estado original, mejorando la experiencia de usuario.
+5. **Diseño Responsivo:** Uso avanzado de clases de Bootstrap (`col-12 col-lg-8`, `flex-grow-1`, `position-sticky`) para que el panel del carrito se ajuste de forma vertical en móviles y se fije flotando en computadoras de escritorio.
 
-## Tecnologías utilizadas 💻
+## 📦 Instrucciones para Correr el Proyecto Localmente
+Si deseas descargar y probar el proyecto en tu máquina local:
 
-*   **React:** Biblioteca para construir la interfaz de usuario basada en componentes.
-*   **Vite:** Herramienta de construcción y servidor de desarrollo.
-*   **Bootstrap:** Framework de CSS utilizado para el diseño, las grillas responsivas y los estilos generales.
-*   **JavaScript (ES6+)**, **HTML5**.
-
-## Estructura de Componentes 🧩
-
-*   `App.jsx`: Componente principal que administra el estado global del carrito y organiza el layout de la página.
-*   `Producto.jsx`: Componente reutilizable para cada tarjeta de videojuego.
-*   `Carrito.jsx`: Componente que renderiza los elementos añadidos, maneja su eliminación y calcula los totales.
-
-## Cómo ejecutar el proyecto localmente 🚀
-
-Para clonar y probar este proyecto en tu propia computadora, sigue estos pasos:
-
-1. **Clona el repositorio:**
-   ```bash
-   git clone https://github.com/abdulksr20/Desarrollo-Frontend-I.git
-   ```
-
-2. **Ingresa al directorio del proyecto:**
-   ```bash
-   cd Desarrollo-Frontend-I
-   ```
-   *(Nota: si la carpeta se llama `tienda-react`, ingresa a esa).*
-
-3. **Instala las dependencias:**
+1. Clona este repositorio o descarga el archivo `.zip` (Recuerda que no incluye `node_modules`).
+2. Abre la terminal en la carpeta del proyecto.
+3. Instala las dependencias necesarias leyendo la "receta" del `package.json`:
    ```bash
    npm install
    ```
-
-4. **Inicia el servidor de desarrollo:**
+4. Enciende el servidor local de desarrollo:
    ```bash
    npm run dev
    ```
-   *Esto abrirá la aplicación en tu navegador, generalmente en `http://localhost:5173/`.*
+5. Abre el enlace que te arroje la consola (generalmente `http://localhost:5173/`).
 
-
+---
+_Proyecto académico desarrollado paso a paso integrando buenas prácticas de componentes funcionales y Hooks de React._
