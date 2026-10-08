@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Producto from './components/Producto'
 import Carrito from './components/Carrito'
+import NavBar from './components/NavBar'
 
 function App() {
   //Estado de los productos
@@ -8,6 +9,8 @@ function App() {
 
   //Estado de carga
   const [cargando, setCargando] = useState(true)
+
+  const [categoriaActual, setCategoriaActual] = useState('Todas')
 
   //Effect que carga los productos desde la API(simulada) simula la latencia de una red paraa mostrar el estado de carga
   useEffect(() => {
@@ -40,18 +43,23 @@ function App() {
     setCarrito([])
   }
 
+
+  const productosFiltrados = categoriaActual === 'Todas'
+    ? productos
+    : productos.filter(p => p.categoria === categoriaActual)
+
   return (
     //Container principal
     <div className="container-fluid p-0 bg-secondary d-flex flex-column" style={{ minHeight: '100vh' }}>
       <header className="text-center bg-primary text-white m-0">
         <h1 className="pt-4 pb-4 mb-0">Tienda de Videojuegos </h1>
       </header>
-
+      <NavBar setCategoriaActual={setCategoriaActual} />
       <div className="container-fluid px-3 px-lg-5 mt-5 flex-grow-1">
 
         <div className="row align-items-start">
           <div className="col-12 col-lg-8 row mb-4 mb-lg-0">
-            <h2 className="text-center fw-bold text-white mb-4">Catálogo de Productos</h2>
+            <h2 className="text-center fw-bold text-white mb-4" id='catalogo'>Catálogo de Productos</h2>
             {/*Carga de productos desde json a cards*/}
             {cargando ? (
               <div className="col-12 text-center mt-5 mb-5">
@@ -62,7 +70,7 @@ function App() {
               </div>
             ) : (
 
-              productos.map((p) => (
+              productosFiltrados.map((p) => (
                 <div className="col-12 col-md-6 col-lg-4 mb-4" key={p.id}>
                   <Producto
                     nombre={p.nombre}
@@ -86,7 +94,7 @@ function App() {
         </div>
       </div>
 
-      <footer className="bg-dark text-white text-center py-4 mt-5">
+      <footer className="bg-dark text-white text-center py-4 mt-5 " id='contacto'>
         <div className="container">
           <p className="mb-0">Tienda de Videojuegos &copy; {new Date().getFullYear()}</p>
         </div>

@@ -2,3 +2,20 @@
 body {
   margin: 0;
 }
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #0b5ed7 !important;
+
+  color: white !important;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.navbar .nav-link:hover {
+  background-color: #0b5ed7 !important;
+
+  color: white !important;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  border-radius: 5px;
+}
