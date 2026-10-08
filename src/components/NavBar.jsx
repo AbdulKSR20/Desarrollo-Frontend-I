@@ -5,7 +5,7 @@ function NavBar({ setCategoriaActual }) {
     return (
         <nav className="navbar navbar-expand-lg bg-dark p-3">
             <div className="container-fluid">
-                <a className="navbar-brand text-white" href="#"></a>
+                <a className="navbar-brand text-white" href="#">Inicio</a>
                 <button className="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -41,11 +41,6 @@ function NavBar({ setCategoriaActual }) {
                         </li>
                     </ul>
 
-                    <form className="d-flex" role="search" id="buscador">
-                        <input className="form-control me-2" type="search" id="inputBusqueda" placeholder="Buscar juego..."
-                            aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
                 </div>
             </div>
         </nav>

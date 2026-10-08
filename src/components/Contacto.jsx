@@ -22,9 +22,10 @@ function Contacto() {
     }
 
     return (
-        <section id="contacto" className="container mt-5 mb-5 p-5 border border-primary bg-body">
-            <h3 className="mb-4">Contactanos</h3>
-            <p>Si tienes alguna duda o sugerencia, no dudes en contactarnos.</p>
+        <div className="col-12 mt-4">
+            <section className="mt-5 mb-5 p-5 border border-primary bg-body rounded" id="contacto">
+                <h3 className="mb-2">Contactanos</h3>
+                <p>Si tienes alguna duda o sugerencia, no dudes en contactarnos.</p>
 
             {alerta && (
                 <div className={`alert alert-${alerta.tipo}`} role="alert">
@@ -34,21 +35,23 @@ function Contacto() {
 
             <form id="formulario" onSubmit={validarFormulario}>
                 <div className="form-group">
-                    <label>Nombre</label>
-                    <input type="text" className="form-control" value={nombre} onChange={(e) => setNombre(e.target.value)}
-                        placeholder="Ingrese su nombre" />
-                    <label>Correo Electronico</label>
-                    <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Ingrese su correo electronico" />
-                    <small id="emailHelp" className="form-text text-muted">Nunca compartiremos su correo electronico con
-                        nadie mas.</small>
-                    <label>Mensaje</label>
-                    <textarea type="text" className="form-control" value={mensaje} onChange={(e) => setMensaje(e.target.value)}
-                        placeholder="Ingrese su mensaje" />
+                    <div className="mb-3"><label>Nombre</label>
+                        <input type="text" className="form-control" value={nombre} onChange={(e) => setNombre(e.target.value)}
+                            placeholder="Ingrese su nombre" />
+                    </div>
+                    <div className="mb-3"><label>Correo Electronico</label>
+                        <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)}
+                            placeholder="Ingrese su correo electronico" />
+                    </div>
+                    <div className="mb-3"><label>Mensaje</label>
+                        <textarea type="text" className="form-control" value={mensaje} onChange={(e) => setMensaje(e.target.value)}
+                            placeholder="Ingrese su mensaje" />
+                    </div>
+                    <button type="submit" className="btn btn-primary mt-4 w-100 fw-bold">Enviar Mensaje</button>
                 </div>
-                <button type="submit" className="btn btn-primary">Enviar Mensaje</button>
             </form>
         </section>
+        </div>
     )
 }
 

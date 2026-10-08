@@ -86,17 +86,18 @@ function App() {
               ))
             )}
           </div>
-
           {/*Carga del carrito*/}
           <div className="col-12 col-lg-4">
             {/*Pasamos la lista del carrito y la funcion de eliminar*/}
             <Carrito listaCarrito={carrito} eliminarDelCarrito={eliminarDelCarrito} vaciarCarrito={vaciarCarrito} />
           </div>
-          <Contacto />
+          <div className="col-12 mt-4">
+            <Contacto />
+          </div>
         </div>
       </div>
 
-      <footer className="bg-dark text-white text-center py-4 mt-5 " id='footer'>
+      <footer className="bg-dark text-white text-center py-4 mt-5" id='footer'>
         <div className="container">
           <p className="mb-0">Tienda de Videojuegos &copy; {new Date().getFullYear()}</p>
         </div>
