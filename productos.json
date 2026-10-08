@@ -2,6 +2,7 @@
     {
         "id": 1,
         "nombre": "Minecraft",
+        "categoria": "VideoJuegos",
         "precioNormal": 49990,
         "precioOferta": 39990,
         "descripcion": "Sobrevive, construye y explora en un mundo infinito de bloques.",
@@ -11,6 +12,7 @@
     {
         "id": 2,
         "nombre": "Mariokart World Tour",
+        "categoria": "VideoJuegos",
         "precioNormal": 59990,
         "precioOferta": 49990,
         "descripcion": "Compite en carreras locas con tus personajes favoritos de Nintendo.",
@@ -20,6 +22,7 @@
     {
         "id": 3,
         "nombre": "Elden Ring",
+        "categoria": "VideoJuegos",
         "precioNormal": 64990,
         "precioOferta": 54990,
         "descripcion": "Un juego de rol de acción y fantasía oscura desafiante.",
@@ -29,6 +32,7 @@
     {
         "id": 4,
         "nombre": "Consola PlayStation 5",
+        "categoria": "Consolas",
         "precioNormal": 699990,
         "precioOferta": 649990,
         "descripcion": "Experimenta tiempos de carga súper rápidos y una inmersión más profunda con PS5.",
@@ -38,6 +42,7 @@
     {
         "id": 5,
         "nombre": "Consola Xbox Series X",
+        "categoria": "Consolas",
         "precioNormal": 679990,
         "precioOferta": 629990,
         "descripcion": "La consola Xbox más rápida y potente de la historia.",
@@ -47,6 +52,7 @@
     {
         "id": 6,
         "nombre": "Consola Nintendo Switch 2",
+        "categoria": "Consolas",
         "precioNormal": 579990,
         "precioOferta": 529990,
         "descripcion": "La última innovación híbrida para jugar en casa o donde vayas.",
