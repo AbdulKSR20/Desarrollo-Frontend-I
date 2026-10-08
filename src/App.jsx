@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Producto from './components/Producto'
 import Carrito from './components/Carrito'
 import NavBar from './components/NavBar'
+import Contacto from './components/Contacto'
 
 function App() {
   //Estado de los productos
@@ -91,10 +92,11 @@ function App() {
             {/*Pasamos la lista del carrito y la funcion de eliminar*/}
             <Carrito listaCarrito={carrito} eliminarDelCarrito={eliminarDelCarrito} vaciarCarrito={vaciarCarrito} />
           </div>
+          <Contacto />
         </div>
       </div>
 
-      <footer className="bg-dark text-white text-center py-4 mt-5 " id='contacto'>
+      <footer className="bg-dark text-white text-center py-4 mt-5 " id='footer'>
         <div className="container">
           <p className="mb-0">Tienda de Videojuegos &copy; {new Date().getFullYear()}</p>
         </div>
